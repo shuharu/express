@@ -9,8 +9,9 @@ var usersRouter = require('./routes/users');
 var helloRouter = require('./routes/hello');
 var notesRouter = require('./routes/notes'); 
 var catRouter = require('./routes/cat'); 
+var YesNoRouter = require('./routes/YesNo');
 
-var app = express();
+var app= express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,6 +28,7 @@ app.use('/users', usersRouter);
 app.use('/hello', helloRouter);
 app.use('/notes', notesRouter);
 app.use('/cat', catRouter);
+app.use('/YesNo', YesNoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
