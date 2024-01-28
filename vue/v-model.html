@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html  lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>My first Vue app<</title>
+    <script src="https://unpkg.com/vue@3.0.0/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+</head>
+<body>
+    <h1 class="bg-secondary text-white display-4 px-3">Vue3</h1>
+    <div id="app">
+        <input type="text" v-model="message">
+        <p>入力されたテキスト: {{ message }}</p>
+    </div>
+
+    <script>
+        const appdata = {
+            data() {
+                return {
+                    message: '' // 初期値は空
+                };
+            }
+        };
+
+        Vue.createApp(appdata).mount('#app');
+    </script>
+</body>
+</html>
